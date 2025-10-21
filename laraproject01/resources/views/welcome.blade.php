@@ -1,11 +1,8 @@
+@extends('layouts.app')
+@section('judulpage','Welcome Page') 
+
+@section('konten')
 <div class="container">
-
-<a href="./">Home</a>
-<a href="{{ route('dtteman') }}">Teman</a>
-
+    <h3>Welcome</h3>   
 </div>
-
-<div class="container">
-    <h3>Welcome</h3>
-    
-</div>
+@endsection

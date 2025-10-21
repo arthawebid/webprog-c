@@ -1,17 +1,15 @@
-<div class="container">
+@extends('layouts.app')
+@section('judulpage','Data Teman') 
 
-<a href="./">Home</a>
-<a href="{{ route('dtteman') }}">Teman</a>
-
-</div>
-
+@section('konten')
 <div class="container">
     <h3>Data Teman</h3>
-    
+
     @if(empty($dt))
         <p>Tidak ada Data</p>
     @else
-    <table border="1">
+    <table class="table table-hover">
+    <thead>
     <tr>
         <th>ID Buku</th>
         <th>Nama Teman</th>
@@ -20,6 +18,8 @@
         <th>Telp</th>
         <th>WA</th>
     </tr>
+    </thead>
+    <tbody>
     @foreach($dt as $d)
     <tr>
         <td>{{ $d['idbuku'] }}</td>
@@ -30,7 +30,9 @@
         <td>08123456789</td>
     </tr>
     @endforeach
+    </tbody>
     </table>
     @endif
 
 </div>
+@endsection
