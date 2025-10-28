@@ -13,10 +13,7 @@
     <tr>
         <th>ID Buku</th>
         <th>Nama Teman</th>
-        <th>Alamat</th>
-        <th>Kota</th>
-        <th>Telp</th>
-        <th>WA</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -24,10 +21,7 @@
     <tr>
         <td>{{ $d['idbuku'] }}</td>
         <td>{{ $d['namateman'] }}</td>
-        <td>Jl. Merdeka No. 10</td>
-        <td>Bandung</td>
-        <td>08123456789</td>
-        <td>08123456789</td>
+        <td><a class="btn btn-warning btn-sm" href="{{ route('dtteman.detail',$d['idbuku']) }}"> detail </a></td>
     </tr>
     @endforeach
     </tbody>
