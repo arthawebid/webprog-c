@@ -31,6 +31,10 @@ class temanController extends Controller
     public function selengkapnya($id){
         $dt = collect($this->dta)->firstWhere('idbuku',$id);
 
+        if(!$dt){
+            abort(404,"Data tidak dengan $id ditemukan");
+        }
+
         return view('datateman',compact('dt'));
     }
 }
